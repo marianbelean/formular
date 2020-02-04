@@ -1,0 +1,30 @@
+Note: the xampp folder contains already the installation (win 10, 64bit, maybe its ready to start, therefore start the xampp-control.exe)
+
+1) Download and install: https://www.techomoro.com/how-to-run-a-php-application-on-windows-10-using-xampp/ (folder Desktop)
+2) Start Xampp Application and only start the first to services (Apache&Mysql)
+3) Create password for database:
+	3.1) open phpmyadmin: localhost/phpmyadmin
+	3.2) under Users -> root (localhost) -> edit priviliges -> change password to root
+		 Note: now you cannot access anymore localhost/phpmyadmin!
+		 
+		 -> go to Xampp Application and for Apache hit the config button -> file entry config.inc.php
+			change entry: $cfg['Servers'][$i]['password'] = ''; with your password (roto)
+		
+		 -> go to Xampp Application and for Mysql hit the config button -> file entry my.ini
+		    change entry: password       = root
+			
+	3.3) Stop and Start the Xampp Application services (Apache&Mysql)
+	     now you can access localhost/phpmyadmin again
+	
+4) Test the application:
+   - Copy your project under the folder C:\Users\$USERNAME\Desktop\Xampp\htdocs\phpformular
+   - open the browser and hit http://localhost/phpformular/index.php
+   - localhost/phpmyadmin -> create database (structure: mydatabase -> citystatus [city, date, temperature])
+   - check console of browser for messages!
+   
+   
+links:
+- https://stackoverflow.com/questions/7165395/call-php-function-from-javascript
+- https://stackoverflow.com/questions/37651539/how-to-connect-mysql-db-using-new-xampp
+- https://synoguide.com/2014/02/20/change-password-sql-database-phpmyadmin/
+- https://www.techomoro.com/how-to-run-a-php-application-on-windows-10-using-xampp/
