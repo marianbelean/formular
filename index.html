@@ -1,0 +1,120 @@
+ <!DOCTYPE html>
+<html>
+<head>
+	<title>PHP formular</title>
+	
+	<style type="text/css">
+	@font-face {
+		font-family: "Roboto";
+		src: url("font/Roboto-Light.ttf");
+	}
+  
+	body {
+		font-family: 'Roboto', sans-serif;
+		min-width: 1000px;
+	}
+
+	.row {
+	  display: flex;
+	  flex-flow: row;
+	  justify-content: space-between;
+	  align-items: center;
+	  width: 100%;
+	  padding: 10px;
+	}
+	
+	.row2 {
+	  display: flex;
+	  flex-flow: row;
+	  justify-content: center;
+	  align-items: center;
+	  width: 100%;
+	}
+	
+	.row3 {
+	  padding: 10px;
+	  display: flex;
+	  flex-flow: row;
+	  justify-content: center;
+	  align-items: center;
+	  width: 100%;
+	}
+	
+	.row4 {
+	  padding: 10px;
+	  display: flex;
+	  flex-flow: row;
+	  justify-content: center;
+	  align-items: center;
+	  width: 100%;
+	}
+	
+	.formular {
+		padding: 10px;
+		display: flex;
+		flex-flow: column;
+		justify-content: center;
+		align-items: center;
+		width: 30%;
+		border-left: solid 1px;
+		border-color: gray;
+	}
+	
+	.formular-title {
+		margin-bottom: 20px;
+	}
+	
+	.btn {
+	  width: 100px;
+	  margin-top: 40px;
+	  background-color: #337ab7;
+	  color: white;
+	  font-size: 16px;
+	  padding: 16px 30px;
+	  border: none;
+	  cursor: pointer;
+	  border-radius: 5px;
+	  text-align: center;
+	}
+	
+	.btn:hover {
+		opacity: 0.8;
+		color: white;
+	}
+	
+	table, th, td {
+    border: 1px solid black;
+	
+	</style>
+	
+</head>
+<body>
+	<form action="insert.php" method="post">	
+		<div align="center">
+			<div class="formular">
+				<div class="formular-title">
+					<h1>Adding a new city status</h1>
+				</div>
+				<div class="row">
+						<div><text>city name:</text></div>
+						<div> <input type="text" name="cityname"></input></div>
+				</div>
+				
+				<div class="row">
+						<div><text>date:</text></div>
+						<div><input type="date" name="date"></input></div>
+				</div>
+				
+				<div class="row">
+						<div><text>temperature:</text></div>
+						<div><input type="number" name="temperature"></input></div>
+				</div>	
+				<div class="row3"><input type="submit" class="btn" value="Insert"></div>
+			</div>
+		</div>			
+	</form>
+	<form action="extract.php" method="post">
+					<div class="row4"><input type="submit" class="btn" value="Check" ></div>
+	</form>
+</body>
+</html> 
